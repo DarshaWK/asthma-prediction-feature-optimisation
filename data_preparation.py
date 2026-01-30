@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from pprint import pprint
 
-data_path = r"C:\Users\dbf1941\OneDrive - AUT University\Python-projects\asthma_attack_risk_prediction\data"
+data_path = r"\asthma_attack_risk_prediction\data"
 
 data_path = r"C:\Users\dbf1941\OneDrive - AUT University\Python-projects\asthma_attack_risk_prediction\AdjustedDataset-Andy"
 # data_withDomCode = pd.read_csv(os.path.join(data_path,"AUT_Darsha_2023_AsthmaPatients_Over6YearsOfAge_Quarter5_WithDomicileCode.txt"),sep='|')
