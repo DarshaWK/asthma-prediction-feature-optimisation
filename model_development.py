@@ -310,17 +310,6 @@ print(anova_table_f1)
 model_aucroc = ols('AUROC ~ C(model_id) * C(imbalance_handling_technique) * C(dataset)', data=resutls_5fcv).fit()
 print(anova_table_aucroc)
 
-#checking the assumptions for p values -
-#Normality of residuals
-residuals_f1 = model_f1.resid
-fig = sm.qqplot(residuals_f1, line='s')
-plt.title('Q-Q Plot of ANOVA Residuals')
-plt.show()
-
-from scipy.stats import shapiro
-stat, p = shapiro(residuals_f1)
-print("Shapiro-Wilk test p-value:", p)
-
 #%% Calculating Confidence Intervals for model accuracy - 5 fold cv
 import pandas as pd
 import scipy.stats as stats
@@ -452,6 +441,7 @@ if leg is not None:
 # Spacing to accommodate outside legend
 g.figure.subplots_adjust(bottom=0.30, right=0.75, top=0.9, hspace=0.35)
 plt.show()
+
 
 
 
